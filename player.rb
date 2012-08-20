@@ -24,7 +24,7 @@ class Player
     "I\'m #{name} with a health of #{health} and a score of #{score}."
   end
   
-  #if __FILE__ == $0
+  if __FILE__ == $0
     player1 = Player.new("moe")
     player2 = Player.new("larry", 60)
     player3 = Player.new("curly", 125)
@@ -35,34 +35,6 @@ class Player
     players = [player1, player2, player3, player4, player5, player6]
     
     players.each do |player|
-      puts player
-    end
-  #end
-end
-
-require File.join(File.dirname(__FILE__), 'player')
-
-class Game
-  attr_reader :title
-  
-  def initialize(title)
-    @title = title
-    @players = []
-  end
-  
-  def add_player(player)
-    @players << player
-  end
-  
-  def play
-    puts "There are #{@players.size} players in #{@title}:"
-    
-    @players.each do |player|
-      puts player
-    end
-    
-    @players.each do |player|
-      player.w00t
       puts player
     end
   end
