@@ -1,3 +1,11 @@
+=begin
+Since I couldn't get Textmate to run 1.9.3 (defaults to 1.8.7 despite all of my desperate attempts),
+I ran into some undesirable behavior (particularly with 'require_relative', or its lack there of in 1.8.7).
+As a result, I'm adding all of the code from all classes here so when I run studio_game.rb in irb
+I actually get a game instead of a bunch of crap.
+I hate you Textmate. Soon enough, I'll be man enough to try MacVim; but, not today.
+=end
+
 class Player
   attr_accessor :name, :health
   
