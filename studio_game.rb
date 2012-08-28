@@ -6,6 +6,18 @@ I actually get a game instead of a bunch of crap.
 I hate you Textmate. Soon enough, I'll be man enough to try MacVim; but, not today.
 =end
 
+class Die
+  attr_reader :number
+  
+  def initialize(number)
+    roll
+  end
+  
+  def roll
+    @number = rand(1..6)
+  end
+end
+
 class Player
   attr_accessor :name, :health
   

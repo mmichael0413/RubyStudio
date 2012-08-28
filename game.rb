@@ -1,5 +1,6 @@
 require File.join(File.dirname(__FILE__), 'player')
 require File.join(File.dirname(__FILE__), 'die')
+require File.join(File.dirname(__FILE__), 'game_turn')
 
 class Game
   attr_reader :title
@@ -19,19 +20,9 @@ class Game
     @players.each do |player|
       puts player
     end
-    
+      
     @players.each do |player|
-      die = Die.new
-      
-      case die.roll
-      when 1..2
-        player.blam
-      when 3..4
-        puts "#{player} got skipped"
-      else
-        player.w00t
-      end
-      
+      GameTurn.take_turn(player)
       puts player
     end
   end
